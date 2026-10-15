@@ -1,0 +1,6 @@
+# Minimal Supabase CLI config. Only the function setting matters here.
+# verify_jwt = false: the Supabase gateway otherwise rejects calls before our code runs when
+# a project uses the newer API-key/JWT-signing setup. This is safe because create-staff
+# verifies the caller itself (auth.getUser + "is active admin" check) before doing anything.
+[functions.create-staff]
+verify_jwt = false

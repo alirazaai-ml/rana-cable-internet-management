@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-slate-50 text-slate-900 antialiased; }
+  input, select, textarea { font-size: 16px; } /* stops iOS zoom on focus */
+  :focus-visible { @apply outline-none ring-2 ring-brand-500 ring-offset-2; }
+  @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+}
